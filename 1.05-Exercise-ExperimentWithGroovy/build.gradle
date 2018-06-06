@@ -14,26 +14,27 @@ or, more compactly
 
 task stringsAndTypes {
     doLast {
-        // TODO: Run `$ gradle sAT`
+        // COMPLETED: Run `$ gradle sAT`
         println "Nice work abbreviating the task name"
 
-        // TODO: Create a variable named foo and assign it the value 4.2
-
-        // TODO: Print the value and class of foo
-
-        // TODO: Use string interpolation to print the square root of 127
+        // COMPLETED: Create a variable named foo and assign it the value 4.2
+        def foo = 4.2
+        // COMPLETED: Print the value and class of foo
+        println("The value of foo is: $foo and it is of type ${foo.class}")
+        // COMPLETED: Use string interpolation to print the square root of 127
         // HINT: http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html
-
-        // TODO: Assign the current date to foo and print it, along with its type
+        println("The square root of 127 is ${Math.sqrt(127)}")
+        // COMPLETED: Assign the current date to foo and print it, along with its type
         // HINT:
         // http://docs.oracle.com/javase/7/docs/api/java/util/package-summary.html
+        foo = new Date()
+        println("The current date is: $foo and it is of type ${foo.class}")
 
-
-        // TODO: Use the `substring` method to extract my name from this string
+        // COMPLETED: Use the `substring` method to extract my name from this string
         def hello = "Hello, Jeremy."
-
-        // TODO: Use `toUpperCase` to capitalize and print my name
-
+        println("${hello.substring(7, 13)}")
+        // COMPLETED: Use `toUpperCase` to capitalize and print my name
+        println("${hello.substring(7, 13).toUpperCase()}")
     }
 }
 
