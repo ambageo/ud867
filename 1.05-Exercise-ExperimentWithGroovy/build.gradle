@@ -41,24 +41,25 @@ task stringsAndTypes {
 
 task closures {
     doLast {
-        // TODO: Declare a closure that takes two arguments and adds them together
+        // COMPLETED: Declare a closure that takes two arguments and adds them together
         // HINT: http://www.groovy-lang.org/closures.html
-
-        // TODO: Call your closure with arguments 17 and 25, and print the result
+        def addClosure={x,y -> x+y}
+        // COMPLETED: Call your closure with arguments 17 and 25, and print the result
         // Beware that something like `println addTwo 17, 25` is ambiguous
+        println("17 plus 25 is: ${addClosure 17,25}")
 
     }
 }
 
 task lists {
     doLast {
-        // TODO: Declare a list containing 5 of your favorite candies
+        // COMPLETED: Declare a list containing 5 of your favorite candies
         // HINT: Try searching for "groovy list literal"
-
-        // TODO: Create a new list of your candies in all caps
+        def candies= ["Snickers", "Merenda", "Lemon Pie", "Apple Pie", "Chocolate"]
+        // COMPLETED: Create a new list of your candies in all caps
         // HINT: http://mrhaki.blogspot.ca/2010/05/groovy-goodness-use-collect-with.html
-
-        // TODO: Print each capital candy
-
+        def capitalCandies= candies.collect{it.toUpperCase()}
+        // COMPLETED: Print each capital candy
+        capitalCandies.each{println("$it")}
     }
 }
