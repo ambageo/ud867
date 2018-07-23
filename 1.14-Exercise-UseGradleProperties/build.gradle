@@ -20,9 +20,15 @@ in the webOutputDir property via the command line).
 
 */
 
+// It seems that the extra property must be defined before the task
+ext {
+    bundleBaseName= 'web2'
+}
+
 task bundleWeb(type: Zip) {
-    baseName = 'web'
+    baseName = bundleBaseName
     destinationDir = file(webOutputDir)
 
     from 'src/web'
 }
+

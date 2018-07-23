@@ -32,3 +32,16 @@ task printDependencies {
         configurations.compile.each { println it.name }
     }
 }
+
+repositories {  // 1.
+    mavenCentral()
+}
+
+dependencies {  // 2.
+    compile 'org.lucee:commons-io:2.6.0'
+}
+
+dependencies {  // 3.
+    compile fileTree (dir:'libs', include: "*jar")
+}
+
